@@ -11,6 +11,11 @@ export class AppController {
     return { exists }
   }
 
+  @Get('Hello')
+  async Hello() {
+    return 'Hello'
+  }
+
   @Post('create')
   async create(@Body() data:any) {
    return this.appService.save(data)
